@@ -19,8 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnCrash.setOnClickListener {
-            startTimer()
+            Thread.sleep(4000)
         }
+
 
 
     }
