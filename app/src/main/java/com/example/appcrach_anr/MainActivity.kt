@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         thread = Thread {
             for (i in 20 downTo 0) {
                 timerValue = i
-                runOnUiThread { updateUI() }
+                updateUI()
                 Thread.sleep(1000)
             }
             runOnUiThread { stopTimer() }
