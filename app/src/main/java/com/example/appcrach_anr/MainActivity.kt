@@ -22,18 +22,19 @@ class MainActivity : AppCompatActivity() {
             startTimer()
         }
 
+
     }
 
     private fun startTimer() {
-        thread = Thread {
+//        thread = Thread {
             for (i in 20 downTo 0) {
                 timerValue = i
-                updateUI()
+                runOnUiThread { updateUI() }
                 Thread.sleep(1000)
             }
             runOnUiThread { stopTimer() }
-        }
-        thread?.start()
+//        }
+//        thread?.start()
     }
 
     private fun stopTimer() {
